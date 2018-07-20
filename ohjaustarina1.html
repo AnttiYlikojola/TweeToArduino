@@ -1,0 +1,104 @@
+
+<!-- saved from url=(0073)http://twinery.org/2/#!/stories/3dd3b69a-e19a-4beb-b6d3-acd8a72e21ef/play -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Robottiohjaus</title>
+		
+		<script type="text/javascript">
+/**
+ * Entweedle - Twine 2 Twee Export Story Format
+ * 
+ * Copyright (c) 2016 Michael McCollum
+ * http://www.maximumverbosity.net/twine/Entweedle/
+ *
+ * This license applies exclusively to the Entweedle story format for Twine 2. No ownership of, nor
+ * licensing restrictions on, the content within the generated story are stated or implied.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+ * associated documentation files (the "Software"), to deal in the Software without restriction,
+ * including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial
+ * portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+ * LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+window.onload=function(){if(typeof(window.Entweedle)=="undefined"){window.Entweedle={convert:function(){var output=window.document.getElementById("output");output.innerHTML=this.export();},export:function(){var buffer=[];var storyData=window.document.getElementsByTagName("tw-storydata");if(storyData){buffer.push(this.buildPassage("StoryTitle","",storyData[0].getAttribute("name")));}
+var userScript=window.document.getElementById("twine-user-script");if(userScript){buffer.push(this.buildPassage("UserScript","script",userScript.innerHTML));}
+var userStylesheet=window.document.getElementById("twine-user-stylesheet");if(userStylesheet){buffer.push(this.buildPassage("UserStylesheet","stylesheet",userStylesheet.innerHTML));}
+var passages=window.document.getElementsByTagName("tw-passagedata");for(var i=0;i<passages.length;++i){buffer.push(this.buildPassageFromElement(passages[i]));}
+return buffer.join('');},buildPassageFromElement:function(passage){var name=passage.getAttribute("name");if(!name){name="Untitled Passage";}
+var tags=passage.getAttribute("tags");var content=passage.textContent;return this.buildPassage(name,tags,content);},buildPassage:function(title,tags,content){var result=[];result.push(":: ",title);if(tags){result.push("[",tags,"]");}
+result.push("\r\n",this.scrub(content),"\r\n\r\n");return result.join('');},scrub:function(content){if(content){content=content.replace(/^::/gm," ::");content=content.replace(/\</gm,"&lt;");content=content.replace(/\>/gm,"&gt;");}
+return content;}}}
+window.Entweedle.convert();}		
+		</script>
+	</head>
+	<body>
+		<pre id="output">:: StoryTitle
+Robottiohjaus
+
+:: UserScript[script]
+
+
+
+:: UserStylesheet[stylesheet]
+
+
+
+:: kysymys
+Paljonko on 5 * 6?
+
+[[25]]
+[[30]]
+
+
+
+:: 25
+Väärin!
+
+(move lookleft)
+(move lookright)
+(move lookleft)
+(move lookright)
+
+[[Kokeile uudelleen-&gt;kysymys]]
+
+:: 30
+Oikein!
+
+(move handsup)
+(move handsdown)
+
+[[Kokeile uudelleen-&gt;kysymys]]
+
+</pre>
+		<div id="storyData" style="display: none;">
+			<tw-storydata name="Robottiohjaus" startnode="1" creator="Twine" creator-version="2.2.1" ifid="D054C9C3-DDC8-454A-BD87-C442FF19AFE8" zoom="1" format="Entweedle" format-version="1.0.3" options="" hidden=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+</script><tw-passagedata pid="1" name="kysymys" tags="" position="499,174" size="100,100">Paljonko on 5 * 6?
+
+[[25]]
+[[30]]
+
+</tw-passagedata><tw-passagedata pid="2" name="25" tags="" position="622,342" size="100,100">Väärin!
+
+(move head-left)
+(move head-right)
+(move head-left)
+(move head-right)
+
+[[Kokeile uudelleen-&gt;kysymys]]</tw-passagedata><tw-passagedata pid="3" name="30" tags="" position="400,342" size="100,100">Oikein!
+
+[move hands-up]
+[move hands-down]
+
+[[Kokeile uudelleen-&gt;kysymys]]</tw-passagedata></tw-storydata>
+		</div>
+	
+</body></html>

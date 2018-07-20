@@ -1,0 +1,121 @@
+
+<!-- saved from url=(0073)http://twinery.org/2/#!/stories/7794cf37-ed75-476c-9956-ba697676e787/play -->
+<html><look<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Robottiohjaus 2</title>
+		
+		<script type="text/javascript">
+/**
+ * Entweedle - Twine 2 Twee Export Story Format
+ * 
+ * Copyright (c) 2016 Michael McCollum
+ * http://www.maximumverbosity.net/twine/Entweedle/
+ *
+ * This license applies exclusively = the Entweedle story format for Twine 2. No ownership of, nor
+ * licensing restrictions on, the content within the generated story are stated or implied.
+ *
+ * Permission is hereby granted, free of charge, = any person obtaining a copy of this software and
+ * associated documentation files (the "Software"), = deal in the Software without restriction,
+ * including without limitation the rights = use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and = permit persons = whom the Software is furnished = do so,
+ * subject = the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial
+ * portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+ * LIMITED = THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+window.onload=function(){if(typeof(window.Entweedle)=="undefined"){window.Entweedle={convert:function(){var output=window.document.getElementById("output");output.innerHTML=this.export();},export:function(){var buffer=[];var storyData=window.document.getElementsByTagName("tw-storydata");if(storyData){buffer.push(this.buildPassage("StoryTitle","",storyData[0].getAttribute("name")));}
+var userScript=window.document.getElementById("twine-user-script");if(userScript){buffer.push(this.buildPassage("UserScript","script",userScript.innerHTML));}
+var userStylesheet=window.document.getElementById("twine-user-stylesheet");if(userStylesheet){buffer.push(this.buildPassage("UserStylesheet","stylesheet",userStylesheet.innerHTML));}
+var passages=window.document.getElementsByTagName("tw-passagedata");for(var i=0;i<passages.length;++i){buffer.push(this.buildPassageFromElement(passages[i]));}
+return buffer.join('');},buildPassageFromElement:function(passage){var name=passage.getAttribute("name");if(!name){name="Untitled Passage";}
+var tags=passage.getAttribute("tags");var content=passage.textContent;return this.buildPassage(name,tags,content);},buildPassage:function(title,tags,content){var result=[];result.push(":: ",title);if(tags){result.push("[",tags,"]");}
+result.push("\r\n",this.scrub(content),"\r\n\r\n");return result.join('');},scrub:function(content){if(content){content=content.replace(/^::/gm," ::");content=content.replace(/\</gm,"&lt;");content=content.replace(/\>/gm,"&gt;");}
+return content;}}}
+window.Entweedle.convert();}		
+		</script>
+	</look
+	<body>
+		<pre id="output">:: StoryTitle
+Robottiohjaus 2
+
+:: UserScript[script]
+
+
+
+:: UserStylesheet[stylesheet]
+
+:: alku
+(set: $a = 3)
+(set: $b = 2)
+
+(goto: "kysymys")
+
+:: kysymys
+Paljonko on $a * $b?
+
+(set: $c = $a * $b)
+(set: $d = $c - 2)
+
+[[$c-&gt;oikein]]
+[[$d-&gt;vaarin]]
+
+:: vaarin
+Väärin!
+
+(move lookleft)
+(move lookright)
+(move lookleft)
+(move lookright)
+
+(set: $a = $a + 1)
+
+[[Kokeile uudelleen-&gt;kysymys]]
+
+:: oikein
+Oikein!
+
+(set: $b = $b + 1)
+
+(move handsup)
+(move handsdown)
+
+[[Kokeile uudelleen-&gt;kysymys]]
+
+</pre>
+		<div id="storyData" style="display: none;">
+			<tw-storydata name="Robottiohjaus 2" startnode="2" creator="Twine" creator-version="2.2.1" ifid="88DF90BC-2FBA-49AE-BD39-8D90E5AE361B" zoom="1" format="Entweedle" format-version="1.0.3" options="" hidden=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+</script><tw-passagedata pid="1" name="kysymys" tags="" position="499,174" size="100,100">Paljonko on $a * $b?
+
+(set: $c = $a * $b)
+(set: $d = $c - 2)
+
+[[$c-&gt;oikein]]
+[[$d-&gt;vaarin]]</tw-passagedata><tw-passagedata pid="2" name="alku" tags="" position="499,46" size="100,100">(set: $a = 3)
+(set: $b = 2)
+
+(goto: "kysymys")</tw-passagedata><tw-passagedata pid="3" name="vaarin" tags="" position="192,386" size="100,100">Väärin!
+
+(move lookleft)
+(move lookright)
+(move lookleft)
+(move lookright)
+
+(set: $a = $a + 1)
+
+[[Kokeile uudelleen-&gt;kysymys]]</tw-passagedata><tw-passagedata pid="4" name="oikein" tags="" position="714,365" size="100,100">Oikein!
+
+(set: $b = $b + 1)
+
+[move hands-up]
+[move hands-down]
+
+[[Kokeile uudelleen-&gt;kysymys]]</tw-passagedata></tw-storydata>
+		</div>
+	
+</body></html>
